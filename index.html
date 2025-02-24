@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa de TI</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-        header { background: #2c3e50; color: white; padding: 20px; }
-        section { padding: 50px; }
-        .cta-button { background: #3498db; color: white; padding: 15px 30px; text-decoration: none; font-size: 20px; border-radius: 5px; }
-        .service { background: #ecf0f1; padding: 20px; margin: 10px; border-radius: 5px; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #f4f4f4; }
+        header { background: #2c3e50; color: white; padding: 50px; transition: background 0.3s ease-in-out; }
+        header:hover { background: #1a252f; }
+        section { padding: 50px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .cta-button { background: #3498db; color: white; padding: 15px 30px; text-decoration: none; font-size: 20px; border-radius: 5px; transition: background 0.3s ease-in-out; }
+        .cta-button:hover { background: #217dbb; }
+        .service { background: white; padding: 20px; margin: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; }
+        .service:hover { transform: scale(1.05); }
         .contact-form { max-width: 400px; margin: auto; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; }
-        button { background: #3498db; color: white; padding: 10px; border: none; cursor: pointer; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #3498db; color: white; padding: 10px; border: none; cursor: pointer; transition: background 0.3s ease-in-out; }
+        button:hover { background: #217dbb; }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sections = document.querySelectorAll("section");
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </head>
 <body>
     <header>
