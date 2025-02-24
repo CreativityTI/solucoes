@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site no GitHub Pages</title>
+    <title>Empresa de TI</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #2c3e50; }
-        a { text-decoration: none; color: #3498db; font-weight: bold; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        header { background: #2c3e50; color: white; padding: 20px; }
+        section { padding: 50px; }
+        .cta-button { background: #3498db; color: white; padding: 15px 30px; text-decoration: none; font-size: 20px; border-radius: 5px; }
+        .service { background: #ecf0f1; padding: 20px; margin: 10px; border-radius: 5px; }
+        .contact-form { max-width: 400px; margin: auto; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #3498db; color: white; padding: 10px; border: none; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h1>🚀 Meu Site está no ar!</h1>
-    <p>Hospedado gratuitamente no <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+    <header>
+        <h1>Soluções de TI para empresas</h1>
+        <p>Cresça com segurança e eficiência</p>
+        <a href="#contato" class="cta-button">Solicite uma Consultoria Gratuita</a>
+    </header>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="service">Suporte de TI e Segurança</div>
+        <div class="service">Desenvolvimento de Sistemas</div>
+        <div class="service">Business Intelligence (Power BI)</div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em tecnologia, ajudando empresas a crescer com soluções eficientes e seguras.</p>
+    </section>
+
+    <section id="cases">
+        <h2>Depoimentos</h2>
+        <p>"Melhoramos nossa segurança digital e infraestrutura graças a essa equipe!" - Cliente X</p>
+        <p>"Os dashboards de BI transformaram nossa tomada de decisão!" - Cliente Y</p>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Seu Nome">
+            <input type="email" placeholder="Seu Email">
+            <textarea placeholder="Sua Mensagem"></textarea>
+            <button>Enviar</button>
+        </div>
+        <p>Ou fale pelo WhatsApp: <a href="https://wa.me/seunumero">Clique Aqui</a></p>
+    </section>
 </body>
 </html>
